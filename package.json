@@ -1,0 +1,28 @@
+{
+  "name": "dropdowns",
+  "version": "1.0.0",
+  "description": "practice drop-down menus",
+  "main": "webpack.config.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonathanDPotter/dropdowns.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonathanDPotter/dropdowns/issues"
+  },
+  "homepage": "https://github.com/JonathanDPotter/dropdowns#readme",
+  "devDependencies": {
+    "css-loader": "^5.2.4",
+    "sass": "^1.32.12",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0"
+  }
+}
