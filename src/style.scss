@@ -1,10 +1,95 @@
+$background: rgba(123, 138, 210, 0.5);
+$yellow: rgba(216, 216, 140, 0.7);
+$red: rgba(247, 11, 11, 0.7);
+$white: rgb(216, 216, 216);
+
 * {
   margin: 0;
   top: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body {;
+body {
   height: 100vh;
   width: 100vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: .9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $background;
 }
+
+h1 {
+  margin-top: 3rem;
+}
+
+.top-note {
+  color: $red;
+  margin: 2rem;
+}
+
+form {
+  width: 70vw;
+  max-width: 600px;
+  overflow: hidden;
+  div {
+    width: 100%;
+    display: flex;
+  }
+  input,
+  select {
+    width: 100%;
+    flex-grow: 1;
+    border-radius: 5px;
+    background-color: $white;
+  }
+  label {
+    margin-right: 1rem;
+    width: 10rem;
+  }
+
+  button {
+    float: right;
+  }
+}
+
+.bottom-note {
+  margin-top: 4rem;
+  width: 70vw;
+  max-width: 600px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+input,
+select:focus {
+  background-color: $yellow;
+} 
+input:invalid:focus {
+  background-image: linear-gradient(
+    to right,
+    $red,
+    $yellow,
+    $white
+  );
+}
+.invalid label{
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 1px;
+  text-decoration-color: $red;
+
+  &::after {
+    content: " *";
+    color: $red;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+

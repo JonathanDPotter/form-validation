@@ -9,12 +9,25 @@
   </head>
   <body>
     <h1>Fill out this form!</h1>
-    <form action="post" method="post">
-      <input type="text" name="first-name" id="first-name-input" />
-      <input type="text" name="last-name" id="last-name-input" />
-      <input type="email" name="email" id="email-input" />
-
-      <select name="country" class="form-control" id="country">
+    <p class="top-note">note: all fields are required</p>
+    <form action="index.html" method="">
+      <div>
+      <label for="first-name">First Name</label>
+      <input type="text" name="first-name" id="first-name-input" placeholder="Guy" required/>
+      </div>
+      <br>
+      <div>
+      <label for="last-name">Last Name</label>
+      <input type="text" name="last-name" id="last-name-input" placeholder="Smiley" required/>
+      </div>
+      <br>
+      <div>
+      <label for="email">e-mail</label>
+      <input type="email" name="email" id="email-input" placeholder="guy.smiley@smail.com" required/>
+      </div>
+      <br>
+      <div>
+      <select name="country" class="form-control" id="country" required>
         <option value="0" label="Select a country ... " selected="selected">
           Select a country ...
         </option>
@@ -347,9 +360,20 @@
           </option>
         </optgroup>
       </select>
-      <input type="password" name="pass-one" id="pass-one" />
-      <input type="password" name="pass-two" id="pass-two" />
-      <input type="submit" id="submit" value="submit" />
+      </div>
+      <br>
+      <div>
+      <label for="pass-one">Password*</label>
+      <input type="password" name="pass-one" id="pass-one" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required />
+      </div>
+      <br>
+      <div>
+      <label for="pass-two">Confirm Password</label>
+      <input type="password" name="pass-two" id="pass-two" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required/>
+      </div>
+      <br>
+      <input type="submit" id="submit" value="submit"/>
     </form>
+    <p class="bottom-note">*password must have at least 8 characters, both upper- and lowercase letters, and a number</p>
   </body>
 </html>
